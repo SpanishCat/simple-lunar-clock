@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "lunarica",
+  "version": "${version}",
+
+  "name": "Lunarica",
+  "description": "Adds a lunar calendar that's in sync with the moon phases",
+  "authors": [
+    "Spanish Cat (Stivivon)"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "MIT License",
+  "icon": "assets/lunarica/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.spanish_cat.lunarica.Lunarica",
+      "net.spanish_cat.lunarica.LunaricaClient"
+    ]
+  },
+  "mixins": [
+    "lunarica.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.11",
+    "fabric-api": "*",
+    "minecraft": "~1.19.3",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}

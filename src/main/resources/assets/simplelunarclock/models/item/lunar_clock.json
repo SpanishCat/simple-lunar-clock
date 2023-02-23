@@ -1,0 +1,16 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "simplelunarclock:item/lunar_clock_00"
+  },
+  "overrides": [
+    { "predicate": { "simplelunarclock:phase": 0.00}, "model": "simplelunarclock:item/lunar_clock_00" },
+    { "predicate": { "simplelunarclock:phase": 0.01}, "model": "simplelunarclock:item/lunar_clock_02" },
+    { "predicate": { "simplelunarclock:phase": 0.02}, "model": "simplelunarclock:item/lunar_clock_04" },
+    { "predicate": { "simplelunarclock:phase": 0.03}, "model": "simplelunarclock:item/lunar_clock_06" },
+    { "predicate": { "simplelunarclock:phase": 0.04}, "model": "simplelunarclock:item/lunar_clock_08" },
+    { "predicate": { "simplelunarclock:phase": 0.05}, "model": "simplelunarclock:item/lunar_clock_10" },
+    { "predicate": { "simplelunarclock:phase": 0.06}, "model": "simplelunarclock:item/lunar_clock_12" },
+    { "predicate": { "simplelunarclock:phase": 0.07}, "model": "simplelunarclock:item/lunar_clock_14" }
+  ]
+}

@@ -1,11 +1,12 @@
-package net.spanish_cat.lunarica;
+package net.spanish_cat.simplelunarclock;
 
 import net.fabricmc.api.ModInitializer;
+import net.spanish_cat.simplelunarclock.item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class Lunarica implements ModInitializer {
-	public static final String MOD_ID = "lunarica";
+public class SimpleLunarClock implements ModInitializer {
+	public static final String MOD_ID = "simplelunarclock";
 	// This logger is used to write text to the console and the log file.
 	// It is considered best practice to use your mod id as the logger's name.
 	// That way, it's clear which mod wrote info, warnings, and errors.
@@ -18,5 +19,6 @@ public class Lunarica implements ModInitializer {
 		// Proceed with mild caution.
 
 		LOGGER.info(MOD_ID + ": Hello Fabric world!");
+		ModItems.RegisterModItems();
 	}
 }

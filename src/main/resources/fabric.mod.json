@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "id": "lunarica",
+  "id": "simplelunarclock",
   "version": "${version}",
 
-  "name": "Lunarica",
-  "description": "Adds a lunar calendar that's in sync with the moon phases",
+  "name": "Simple Lunar Clock",
+  "description": "Adds a clock that shows moon phases",
   "authors": [
     "Spanish Cat (Stivivon)"
   ],
@@ -14,17 +14,20 @@
   },
 
   "license": "MIT License",
-  "icon": "assets/lunarica/icon.png",
+  "icon": "assets/simplelunarclock/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.spanish_cat.lunarica.Lunarica",
-      "net.spanish_cat.lunarica.LunaricaClient"
+      "net.spanish_cat.simplelunarclock.SimpleLunarClock"
+    ],
+    "client": [
+      "net.spanish_cat.simplelunarclock.SimpleLunarClockClient"
     ]
   },
+
   "mixins": [
-    "lunarica.mixins.json"
+    "simplelunarclock.mixins.json"
   ],
 
   "depends": {

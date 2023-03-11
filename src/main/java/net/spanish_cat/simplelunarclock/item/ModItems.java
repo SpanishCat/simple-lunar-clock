@@ -13,7 +13,7 @@ import net.spanish_cat.simplelunarclock.item.custom.LunarClockItem;
 
 public class ModItems {
     public static final Item LUNAR_CLOCK = RegisterItem("lunar_clock",
-            new LunarClockItem(new FabricItemSettings().maxCount(1)), ItemGroups.TOOLS);
+            new LunarClockItem(new FabricItemSettings()), ItemGroups.TOOLS);
 
     private static Item RegisterItem(String name, Item item, ItemGroup group)
     {

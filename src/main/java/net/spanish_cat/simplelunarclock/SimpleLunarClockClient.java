@@ -5,7 +5,6 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.item.ModelPredicateProviderRegistry;
 import net.minecraft.util.Identifier;
-import net.minecraft.world.LunarWorldView;
 import net.spanish_cat.simplelunarclock.item.ModItems;
 import net.spanish_cat.simplelunarclock.item.custom.LunarClockItem;
 
@@ -26,5 +25,13 @@ public class SimpleLunarClockClient implements ClientModInitializer {
 				return (float) LunarClockItem.moonPhaseNum / 100;
 			});
 
-		}
+		ModelPredicateProviderRegistry.register(ModItems.LUNAR_CLOCK, new Identifier(SimpleLunarClock.MOD_ID, "is_day"), (itemStack, clientWorld, livingEntity, i) -> {
+			if (clientWorld != null){
+				return (float) ((LunarClockItem.isDay) ? 1 : 0);
+			}
+			else{
+				return 0.5f;
+			}
+		});
+	}
 }

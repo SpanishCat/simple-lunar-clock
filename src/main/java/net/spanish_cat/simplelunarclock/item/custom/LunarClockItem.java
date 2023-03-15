@@ -28,6 +28,7 @@ public class LunarClockItem extends Item {
     Map<Integer, String> phases = new HashMap<>();
     public static String moonPhase = "Null";
     public static int moonPhaseNum = -1;
+    public static Boolean isDay;
 
     public LunarClockItem(Settings settings){
         super(settings);
@@ -43,20 +44,20 @@ public class LunarClockItem extends Item {
         phases.put(6, "Third Quarter");
         phases.put(7, "Waning Gibbous");
     }
-
-    @Override
-    public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
-
-        if (world.isClient())
-        {
-            moonPhaseNum = world.getMoonPhase();
-            moonPhase = phases.get(moonPhaseNum);
-
-//            SimpleLunarClock.LOGGER.info("Clock updated");
-        }
-
-        super.inventoryTick(stack, world, entity, slot, selected);
-    }
+//
+//    @Override
+//    public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
+//
+//        if (world.isClient())
+//        {
+//            moonPhaseNum = world.getMoonPhase();
+//            moonPhase = phases.get(moonPhaseNum);
+//
+////            SimpleLunarClock.LOGGER.info("Clock updated");
+//        }
+//
+//        super.inventoryTick(stack, world, entity, slot, selected);
+//    }
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
@@ -64,9 +65,13 @@ public class LunarClockItem extends Item {
 
         if (!world.isClient())
         {
+            isDay = world.isDay();
             moonPhaseNum = world.getMoonPhase();
             moonPhase = phases.get(moonPhaseNum);
             user.sendMessage(Text.literal(moonPhase).formatted(Formatting.BLUE), true);
+//            user.sendMessage(Text.literal(Boolean.toString(world.isDay())).formatted(Formatting.BLUE));
+//            user.sendMessage(Text.literal(Float.toString(moonPhaseNum / 100.0f)).formatted(Formatting.BLUE));
+
         }
 
 

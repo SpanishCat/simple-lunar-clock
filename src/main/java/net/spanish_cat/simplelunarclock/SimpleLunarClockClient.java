@@ -16,22 +16,14 @@ public class SimpleLunarClockClient implements ClientModInitializer {
 
 	}
 
+	// Predicate providers
 	static{
-			ModelPredicateProviderRegistry.register(ModItems.LUNAR_CLOCK, new Identifier(SimpleLunarClock.MOD_ID, "phase"), (itemStack, clientWorld, livingEntity, i) -> {
-				if (clientWorld != null){
-					LunarClockItem.moonPhaseNum = clientWorld.getMoonPhase();
-				}
-
-				return (float) LunarClockItem.moonPhaseNum / 100;
+			ModelPredicateProviderRegistry.register(ModItems.LUNAR_CLOCK, new Identifier(SimpleLunarClock.MOD_ID, "phase"), (itemStack, clientWorld, livingEntity, i) ->
+			{
+				if (LunarClockItem.moonPhaseNum == -1f)
+					return 0.15f;
+				else
+					return (float) LunarClockItem.moonPhaseNum / 100;
 			});
-
-		ModelPredicateProviderRegistry.register(ModItems.LUNAR_CLOCK, new Identifier(SimpleLunarClock.MOD_ID, "is_day"), (itemStack, clientWorld, livingEntity, i) -> {
-			if (clientWorld != null){
-				return (float) ((LunarClockItem.isDay) ? 1 : 0);
-			}
-			else{
-				return 0.5f;
-			}
-		});
 	}
 }

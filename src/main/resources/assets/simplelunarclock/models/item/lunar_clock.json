@@ -5,12 +5,20 @@
   },
   "overrides": [
     { "predicate": { "simplelunarclock:phase": 0.00}, "model": "simplelunarclock:item/lunar_clock_00" },
-    { "predicate": { "simplelunarclock:phase": 0.01}, "model": "simplelunarclock:item/lunar_clock_02" },
-    { "predicate": { "simplelunarclock:phase": 0.02}, "model": "simplelunarclock:item/lunar_clock_04" },
-    { "predicate": { "simplelunarclock:phase": 0.03}, "model": "simplelunarclock:item/lunar_clock_06" },
-    { "predicate": { "simplelunarclock:phase": 0.04}, "model": "simplelunarclock:item/lunar_clock_08" },
-    { "predicate": { "simplelunarclock:phase": 0.05}, "model": "simplelunarclock:item/lunar_clock_10" },
-    { "predicate": { "simplelunarclock:phase": 0.06}, "model": "simplelunarclock:item/lunar_clock_12" },
-    { "predicate": { "simplelunarclock:phase": 0.07}, "model": "simplelunarclock:item/lunar_clock_14" }
+    { "predicate": { "simplelunarclock:phase": 0.01}, "model": "simplelunarclock:item/lunar_clock_01" },
+    { "predicate": { "simplelunarclock:phase": 0.02}, "model": "simplelunarclock:item/lunar_clock_02" },
+    { "predicate": { "simplelunarclock:phase": 0.03}, "model": "simplelunarclock:item/lunar_clock_03" },
+    { "predicate": { "simplelunarclock:phase": 0.04}, "model": "simplelunarclock:item/lunar_clock_04" },
+    { "predicate": { "simplelunarclock:phase": 0.05}, "model": "simplelunarclock:item/lunar_clock_05" },
+    { "predicate": { "simplelunarclock:phase": 0.06}, "model": "simplelunarclock:item/lunar_clock_06" },
+    { "predicate": { "simplelunarclock:phase": 0.07}, "model": "simplelunarclock:item/lunar_clock_07" },
+    { "predicate": { "simplelunarclock:phase": 0.08}, "model": "simplelunarclock:item/lunar_clock_08" },
+    { "predicate": { "simplelunarclock:phase": 0.09}, "model": "simplelunarclock:item/lunar_clock_09" },
+    { "predicate": { "simplelunarclock:phase": 0.10}, "model": "simplelunarclock:item/lunar_clock_10" },
+    { "predicate": { "simplelunarclock:phase": 0.11}, "model": "simplelunarclock:item/lunar_clock_11" },
+    { "predicate": { "simplelunarclock:phase": 0.12}, "model": "simplelunarclock:item/lunar_clock_12" },
+    { "predicate": { "simplelunarclock:phase": 0.13}, "model": "simplelunarclock:item/lunar_clock_13" },
+    { "predicate": { "simplelunarclock:phase": 0.14}, "model": "simplelunarclock:item/lunar_clock_14" },
+    { "predicate": { "simplelunarclock:phase": 0.15}, "model": "simplelunarclock:item/lunar_clock_15" }
   ]
 }

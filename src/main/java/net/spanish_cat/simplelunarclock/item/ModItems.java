@@ -12,9 +12,11 @@ import net.spanish_cat.simplelunarclock.SimpleLunarClock;
 import net.spanish_cat.simplelunarclock.item.custom.LunarClockItem;
 
 public class ModItems {
+    // Registering
     public static final Item LUNAR_CLOCK = RegisterItem("lunar_clock",
             new LunarClockItem(new FabricItemSettings()), ItemGroups.TOOLS);
 
+    // Functions
     private static Item RegisterItem(String name, Item item, ItemGroup group)
     {
         ItemGroupEvents.modifyEntriesEvent(group).register(entries -> entries.add(item));
